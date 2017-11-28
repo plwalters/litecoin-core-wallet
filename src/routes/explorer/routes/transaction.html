@@ -1,0 +1,15 @@
+<template>
+  <require from="components/transaction-details"></require>
+  <h3>Transaction</h3>
+  <div class="row">
+    <div class="col-xs-12">
+      <input value.bind="searchText" />
+    </div>
+    <div class="col-xs-12">
+      <button click.trigger="search()">Search</button>
+    </div>
+  </div>
+  <template if.bind="transaction.length">
+    <transaction-details transaction-info.bind="transaction"></transaction-details>
+  </template>
+</template>

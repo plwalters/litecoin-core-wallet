@@ -1,0 +1,10 @@
+<template>
+  <require from="components/controls/toggle-control"></require>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>DEBUG</h3>
+      <toggle-control text="Wallet Encryption" value.bind="settings.startOnSystemStart"></toggle-control>
+      <toggle-control text="Coin control features" value.bind="settings.coinControlFeatures"></toggle-control>
+    </div>
+  </div>
+</template>

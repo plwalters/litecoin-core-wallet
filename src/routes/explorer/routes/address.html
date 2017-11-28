@@ -1,0 +1,19 @@
+<template>
+  <require from="components/address-details"></require>
+  <h3>Address</h3>
+  <div class="row">
+    <div class="col-xs-12">
+      <input value.bind="searchText" />
+    </div>
+    <div class="col-xs-12">
+      <button click.trigger="search()">Search</button>
+    </div>
+  </div>
+  <template if.bind="addressInfos.length">
+    <div class="row" repeat.for="info of addressInfos">
+      <div class="col-xs-12">
+        <address-details address-info.bind="info"></address-details>
+      </div>
+    </div>
+  </template>
+</template>

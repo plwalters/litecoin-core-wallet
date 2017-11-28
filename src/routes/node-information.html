@@ -1,0 +1,60 @@
+<template>
+  <div class="row">
+    <div class="col-xs-12">
+      <strong>lcoin version:</strong>
+      <span>${info.version}</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <strong>Network:</strong>
+      <span>${info.network}</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <strong>Chain:</strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <span>Height: ${info.chain.height}</span>
+    </div>
+    <div class="col-xs-3">
+      <span>Tip: ${info.chain.tip}</span>
+    </div>
+    <div class="col-xs-3">
+      <span>Progress: ${info.chain.progress}</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <strong>Pool:</strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <span>Host: ${info.pool.height}</span>
+    </div>
+    <div class="col-xs-3">
+      <span>Port: ${info.pool.tip}</span>
+    </div>
+    <div class="col-xs-3">
+      <span>Agent: ${info.pool.progress}</span>
+    </div>
+    <div class="col-xs-3">
+      <span>Services: ${info.pool.services}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <span>Outbound connections: ${info.pool.outbound}</span>
+    </div>
+    <div class="col-xs-6">
+      <span>Port: ${info.pool.inbound}</span>
+    </div>
+  </div>
+</template>
