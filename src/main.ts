@@ -2,6 +2,8 @@ import environment from './environment';
 import {PLATFORM} from 'aurelia-pal';
 import * as Bluebird from 'bluebird';
 
+import 'font-awesome/scss/font-awesome.scss';
+
 Bluebird.config({ warnings: { wForgottenReturn: false } });
 
 export function configure(aurelia) {

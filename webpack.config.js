@@ -74,6 +74,13 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
         use: ['css-loader', 'sass-loader'],
         issuer: /\.html?$/i
       },
+      {
+        test: /font-awesome\.config\.js/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'font-awesome-loader' }
+        ]
+      },
       { test: /\.html$/i, loader: 'html-loader' },
       { test: /\.ts$/i, loader: 'awesome-typescript-loader', exclude: nodeModulesDir },
       { test: /\.json$/i, loader: 'json-loader' },
