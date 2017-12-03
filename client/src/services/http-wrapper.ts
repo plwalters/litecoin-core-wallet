@@ -10,7 +10,7 @@ export class HttpWrapper {
     this.session = session;
     this.http = new HttpClient()
       .configure(x => {
-        x.withBaseUrl(`http://localhost:19332/`);
+        x.withBaseUrl(`http://localhost:3000/`);
       });
   }
 
