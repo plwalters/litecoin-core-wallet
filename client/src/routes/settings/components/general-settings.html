@@ -1,10 +1,46 @@
 <template>
   <require from="components/controls/toggle-control"></require>
-  <div class="row">
+  <div class="row pad-top">
     <div class="col-xs-12">
       <h3>GENERAL</h3>
       <toggle-control text="Start on system login" value.bind="settings.startOnSystemStart"></toggle-control>
       <toggle-control text="Coin control features" value.bind="settings.coinControlFeatures"></toggle-control>
+      <toggle-control text="Use unconfirmed funds" value.bind="settings.useUnconfirmedFunds"></toggle-control>
+      <toggle-control text="Hide tray icon" value.bind="settings.hideTrayIcon"></toggle-control>
+      <toggle-control text="Dark theme" value.bind="settings.darkTheme"></toggle-control>
+      <toggle-control text="Minimize on close" value.bind="settings.minimizeOnClose"></toggle-control>
+      <toggle-control text="Minimize to tray" value.bind="settings.minimizeToTray"></toggle-control>
+    </div>
+  </div>
+  <div class="row pad-top">
+    <div class="col-xs-12">
+      <toggle-control text="Wallet units" value.bind="settings.startOnSystemStart"></toggle-control>
+      <toggle-control text="Local currency" value.bind="settings.coinControlFeatures"></toggle-control>
+      <toggle-control text="Language" value.bind="settings.useUnconfirmedFunds"></toggle-control>
+    </div>
+  </div>
+  <div class="row pad-top">
+    <div class="col-xs-12">
+      <ul class="list-unstyled">
+        <li>
+          <a href="">3rd party tx URLs</a>
+        </li>
+        <li>
+          <a href="">Sign message</a>
+        </li>
+        <li>
+          <a href="">Verify message</a>
+        </li>
+        <li>
+          <a href="">Sending addresses</a>
+        </li>
+        <li>
+          <a href="">Receiving addresses</a>
+        </li>
+        <li>
+          <a href="">Wallet statistics</a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>

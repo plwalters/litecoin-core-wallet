@@ -10,7 +10,7 @@ export class AddressService {
   }
 
   getAddressInfo(address) {
-    return this.http.get(`/coin/address/${address}`).then(result => {
+    return this.http.get(`/addresses/${address}`).then(result => {
       return result.map(item => {
         return new AddressInfo(item);
       });

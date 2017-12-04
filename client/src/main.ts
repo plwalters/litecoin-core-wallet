@@ -3,6 +3,7 @@ import {PLATFORM} from 'aurelia-pal';
 import * as Bluebird from 'bluebird';
 
 import 'font-awesome/scss/font-awesome.scss';
+import './app.scss';
 
 Bluebird.config({ warnings: { wForgottenReturn: false } });
 
