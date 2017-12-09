@@ -15,6 +15,19 @@ router.get('/getnetworkinfo', (req, res, next) => {
   });
 });
 
+/* GET nodes peer information */
+router.get('/getpeerinfo', (req, res, next) => {
+  let request = {
+    method: 'getpeerinfo',
+    params: [],
+    id: 'getpeerinfo'
+  };
+
+  jsonRpcClient.post(request).then(result => {
+    return res.json(result);
+  });
+});
+
 /* GET peers of this node's information */
 router.get('/peers', (req, res, next) => {
   res.json([{ id: 1 }, { id: 1 }]);

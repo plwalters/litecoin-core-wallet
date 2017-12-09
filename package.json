@@ -1,0 +1,24 @@
+{
+  "name": "litecoin-core-wallet",
+  "version": "1.0.0",
+  "description": "A web application version of Bitcoin wallet",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrent \"npm run client\" \"npm run proxy-adapter\"",
+    "client": "cd ./client && au run --watch",
+    "proxy-adapter": " cd ./proxy-adapter && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PWKad/litecoin-core-wallet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PWKad/litecoin-core-wallet/issues"
+  },
+  "homepage": "https://github.com/PWKad/litecoin-core-wallet#readme",
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
