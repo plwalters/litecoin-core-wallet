@@ -1,0 +1,24 @@
+<template>
+  <div class="row">
+    <div class="col-xs-4">
+      <strong>Wallet</strong>
+    </div>
+    <div class="col-xs-5">
+      <strong>Ł ${wallet.balance}</strong>
+    </div>
+    <div class="col-xs-3">
+      <span>($${wallet.balance})</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <span>Pending</span>
+    </div>
+    <div class="col-xs-5">
+      <span>Ł ${wallet.unconfirmed_balance}</span>
+    </div>
+    <div class="col-xs-3">
+      <span>($${wallet.unconfirmed_balance})</span>
+    </div>
+  </div>
+</template>

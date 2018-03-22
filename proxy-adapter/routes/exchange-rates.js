@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const http = require('http');
 
 /* GET current exchange rate by currency code */
 router.get('/', function(req, res, next) {
-  res.json({ price: '$103.76' });
+  return http.get('https://www.bitstamp.net/api/v2/ticker/ltcusd/');
 });
 
 module.exports = router;

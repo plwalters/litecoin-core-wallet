@@ -1,0 +1,28 @@
+<template>
+  <require from="routes/balances/components/wallet-details"></require>
+  <h3>MY WALLET</h3>
+  <wallet-details wallet.bind="wallet"></wallet-details>
+
+  <div class="row">
+    <div class="col-xs-4">
+      <strong>Channels</strong>
+    </div>
+    <div class="col-xs-5">
+      <strong>Ł ${wallet.balance}</strong>
+    </div>
+    <div class="col-xs-3">
+      <span>($${wallet.balance})</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <span>Pending</span>
+    </div>
+    <div class="col-xs-5">
+      <span>Ł ${wallet.unconfirmed_balance}</span>
+    </div>
+    <div class="col-xs-3">
+      <span>($${wallet.unconfirmed_balance})</span>
+    </div>
+  </div>
+</template>
