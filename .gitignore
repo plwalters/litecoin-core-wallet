@@ -28,3 +28,6 @@ scripts
 
 dist
 src-bak
+
+client/jspm_packages
+client/node_modules

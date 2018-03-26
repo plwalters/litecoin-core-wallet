@@ -43,3 +43,4 @@ To run on testnet only add this to the `litecoin.conf` -
 ```
 testnet=1
 ```
+

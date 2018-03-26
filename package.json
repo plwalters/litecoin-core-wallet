@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrent \"npm run client\" \"npm run proxy-adapter\"",
-    "client": "cd ./client && au run --watch",
+    "client": "cd ./client && gulp watch",
     "proxy-adapter": " cd ./proxy-adapter && npm start"
   },
   "repository": {
