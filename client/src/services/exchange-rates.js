@@ -9,8 +9,7 @@ export class ExchangeRateService {
 
   getCurrentExchangeRate() {
     return this.http.get('/exchange-rates/').then(result => {
-      console.log(result)
-      return new ExchangeRate(result.result);
+      return new ExchangeRate(result);
     });
   }
 }

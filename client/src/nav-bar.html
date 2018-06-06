@@ -1,7 +1,6 @@
 <template bindable="router">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Testing</a>
       <a href="#" ref="sideNav" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="left hide-on-small">
         <li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">

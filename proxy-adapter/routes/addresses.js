@@ -1,15 +1,55 @@
 const express = require('express');
 const router = express.Router();
 const { JsonRpcRequest, jsonRpcClient } = require('../services/json-rpc');
+const bodyParser = require('body-parser');
 
-/* GET all addresses for this wallet */
 router.get('/', (req, res, next) => {
-  res.json([{ address: 1354353245 }, { address: 1123123123 }]);
+  return res.json('hey');
+});
+
+router.get('/listreceivedbyaddress', (req, res, next) => {
+  let request = {
+    method: 'listreceivedbyaddress',
+    params: [
+      0, true
+    ],
+    id: 'listreceivedbyaddress'
+  };
+
+  jsonRpcClient.post(request).then(result => {
+    return res.json(result);
+  }).catch(error => {
+    console.log(error)
+  });
 });
 
 /* GET  */
-router.post('/new-receive', (req, res, next) => {
-  res.json({ address: 9871293871 });
+router.get('/getnewaddress', (req, res, next) => {
+  let request = {
+    method: 'getnewaddress',
+    params: [],
+    id: 'getnewaddress'
+  };
+
+  jsonRpcClient.post(request).then(result => {
+    return res.json(result);
+  });
+});
+
+/* POST */
+router.post('/sendtoaddress', (req, res, next) => {
+  let targetAddress = req.body.address;
+  let amount = req.body.amount;
+
+  let request = {
+    method: 'sendtoaddress',
+    params: [targetAddress, amount],
+    id: 'sendtoaddress'
+  };
+
+  jsonRpcClient.post(request).then(result => {
+    return res.json(result);
+  });
 });
 
 module.exports = router;

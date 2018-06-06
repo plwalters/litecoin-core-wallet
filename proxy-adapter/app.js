@@ -12,7 +12,6 @@ const messages = require('./routes/messages');
 const node = require('./routes/node');
 const transactions = require('./routes/transactions');
 const wallet = require('./routes/wallet');
-
 const app = express();
 
 app.use(logger('dev'));

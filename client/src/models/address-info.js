@@ -8,6 +8,12 @@ export class AddressInfo {
   hash;
   index;
 
+  account;
+  confirmations;
+  label;
+  txids;
+  amount;
+
   constructor(data) {
     Object.assign(this, data);
   }

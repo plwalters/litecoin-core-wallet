@@ -9,7 +9,6 @@ export class WalletService {
 
   getWalletInfo() {
     return this.http.get('/wallet/getwalletinfo').then(result => {
-      console.log(result)
       return new Wallet(result.result);
     });
   }

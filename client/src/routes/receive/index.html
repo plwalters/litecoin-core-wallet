@@ -1,3 +1,16 @@
 <template>
-  <router-view></router-view>
+  <require from="components/address-details"></require>
+  <require from="./components/receiver-details"></require>
+  <div class="row">
+    <div class="col s12 right-align">
+      <button class="waves-effect waves-light btn">Request</button>
+      <button class="waves-effect waves-light btn">Clear</button>
+      <button class="waves-effect waves-light btn"><i class="fa fa-search"></i></button>
+      <button class="waves-effect waves-light btn">Filter</button>
+    </div>
+  </div>
+
+  <receiver-details></receiver-details>
+
+  <address-details address-info.bind="newAddress"></address-details>
 </template>

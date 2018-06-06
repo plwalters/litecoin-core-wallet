@@ -6,7 +6,6 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
-
   map: {
     "Dogfalo/materialize": "github:Dogfalo/materialize@0.100.2",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
